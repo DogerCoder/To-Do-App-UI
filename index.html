@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do App UI</title>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="shortcut icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/128/3075/3075908.png" />
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            
+        }
+
+        .header{
+            width: 100%;
+            height: 10%;
+            background: #abbaab;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #ffffff, #abbaab);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #ffffff, #abbaab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            box-shadow: 0 0 3px black;
+            position: absolute;
+            display: flex;
+            align-items: center;
+        }
+
+        #mania li{
+            color: black;
+            font-weight: bolder;
+            list-style: none;
+            display: inline-block;
+            padding: 3px 20px;
+            font-size: 2vh;
+        }
+
+        #logo{
+            width: 6vh;
+            height: 6vh;
+            border-radius: 6vh;
+            position: absolute;
+            left: 85%;
+        }
+
+        .cant{
+            width: 100%;
+            height: 50%;
+            position: absolute;
+            top: 30%;
+            overflow: scroll;
+            display: flex;
+            
+            background: #fc00ff;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #00dbde, #fc00ff);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #00dbde, #fc00ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        }
+
+        #can1{
+            width: 30vh;
+            height: 30vh;
+            background-color: white;
+            box-shadow: 0 0 2px black;
+            position: absolute;
+            left: 5vh;
+            top: 8vh;
+            border-radius: 0.7vh;
+        }
+        #can2{
+            width: 30vh;
+            height: 30vh;
+            background-color: white;
+            box-shadow: 0 0 2px black;
+            position: absolute;
+            left: 40vh;
+            top: 8vh;
+            border-radius: 0.7vh;
+        }
+        #can3{
+            width: 30vh;
+            height: 30vh;
+            background-color: white;
+           box-shadow: 0 0 2px black;
+            position: absolute;
+            left: 75vh;
+            top: 8vh;
+            border-radius: 0.7vh;
+        }
+        #can4{
+            width: 30vh;
+            height: 30vh;
+            background-color: white;
+           box-shadow: 0 0 2px black;
+            position: absolute;
+            left: 110vh;
+            top: 8vh;
+            border-radius: 0.7vh;
+        }
+        #can5{
+            width: 30vh;
+            height: 30vh;
+            background-color: white;
+           box-shadow: 0 0 2px black;
+            position: absolute;
+            left: 145vh;
+            top: 8vh;
+            border-radius: 0.7vh;
+        }
+        ::-webkit-scrollbar{ 
+           display: none;
+         }
+         #text1{
+             position: absolute;
+             left: 8%;
+             top: 32%;
+             font-size: 2vh;
+             z-index: 1;
+             color: white;
+         }
+         #text2{
+             position: absolute;
+             left: 8%;
+             top: 82%;
+             font-size: 3vh;
+             z-index: 1;
+         }
+
+         .cant h5{
+             font-size: 2vh;
+             position: absolute;
+             left: 5%;
+             top: 5%;
+         }
+
+         .cant img{
+             width: 50%;
+             height: 50%;
+             position: absolute;
+             top: 32%;
+             left: 10%;
+         }
+
+        #icon1{
+            position: absolute;
+            left: 80%;
+            top: 80%;
+            font-size: 2vh;
+            -webkit-text-stroke: 1px black;
+            color: white;
+        }
+        #icon2{
+            position: absolute;
+            left: 80%;
+            top: 80%;
+            font-size: 2vh;
+            -webkit-text-stroke: 1px black;
+            color: white;
+        }
+        #icon3{
+            position: absolute;
+            left: 80%;
+            top: 80%;
+            font-size: 2vh;
+            -webkit-text-stroke: 1px black;
+            color: white;
+        }
+        #icon4{
+            position: absolute;
+            left: 80%;
+            top: 80%;
+            font-size: 2vh;
+            -webkit-text-stroke: 1px black;
+            color: white;
+        }
+        #icon5{
+            position: absolute;
+            left: 80%;
+            top: 80%;
+            font-size: 2vh;
+            -webkit-text-stroke: 1px black;
+            color: white;
+        }
+        .cant2{
+            width: 100%;
+            height: 200%;
+            background-color: white;
+            position: absolute;
+            top: 90%;
+            overflow: scroll;
+            display: flex;
+         
+        }
+
+        #task1{
+            width: 90%;
+            height: 20vh;
+            background-color: white;
+            box-shadow: 0 0 2px black;
+            position: absolute;
+            left: 1vh;
+            top: 10vh;
+            border-radius: 0.7vh;
+        }
+        #task2{
+            width: 90%;
+            height: 20vh;
+            background-color: white;
+            box-shadow: 0 0 2px black;
+            position: absolute;
+            left: 1vh;
+            top: 50vh;
+            border-radius: 0.7vh;
+        }
+        #task3{
+            width: 90%;
+            height: 20vh;
+            background-color: white;
+            box-shadow: 0 0 2px black;
+            position: absolute;
+            left: 1vh;
+            top: 90vh;
+            border-radius: 0.7vh;
+        }
+        #task4{
+            width: 90%;
+            height: 20vh;
+            background-color: white;
+            box-shadow: 0 0 2px black;
+            position: absolute;
+            left: 1vh;
+            top: 130vh;
+            border-radius: 0.7vh;
+        }
+        .cant2 h5{
+             font-size: 2vh;
+             position: absolute;
+             left: 30%;
+             top: 30%;
+         }
+         .cant2 h6{
+             font-size: 2vh;
+             position: absolute;
+             left: 30%;
+             top: 50%;
+             color: lightgray;
+             -webkit-text-stroke: 0.2px black;
+         }
+
+         .cant2 img{
+             width: 10vh;
+             height: 10vh;
+             position: absolute;
+             top: 30%;
+             left: 5%;
+         }
+
+         #adjustimg{
+             width: 22vh;
+             height: 22vh;
+         
+             position: absolute;
+             top: 261%;
+             display: inline-flex;
+         }
+         #manage{
+             position: absolute;
+             top: 263%;
+             left: 50%;
+         }
+
+         #managebutton{
+             height: 6vh;
+             width: 16vh;
+             outline: none;
+             border: none;
+             background-color: #e44;
+             position: absolute;
+             top: 280%;
+             left:50%;
+             font-weight: bold;
+             color: white;
+         }
+         .custom-shape-divider-bottom-1650818819 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    
+    top: 69%;
+}
+
+.custom-shape-divider-bottom-1650818819 svg {
+    position: relative;
+    display: block;
+    width: calc(169% + 1.3px);
+    height: 150px;
+    
+}
+
+.custom-shape-divider-bottom-1650818819 .shape-fill {
+    fill: #fff;
+}
+         </style>
+</head>
+<body>
+    <div class="header">
+      <img id="logo"src='https://cdn-icons.flaticon.com/png/512/2202/premium/2202112.png?token=exp=1651073009~hmac=fd7283ba24a6401dde5056c34a401a71'>
+
+        <ul id="mania">
+            <li>Home</li>
+            <li>Tasks</li>
+           
+            <li>Profile</li>
+        </ul>
+    </div>
+
+    <h3 id="text1">Completed Tasks</h3>
+
+    <div class="cant">
+        <div id="can1">
+            <h5>Office Work</h5>
+            <div class="fa fa-pencil"id='icon1'></div>
+            <img src="https://cdn-icons.flaticon.com/png/128/3160/premium/3160762.png?token=exp=1651071200~hmac=6bd21faef0172a9db2069c705fbd1227">
+
+        </div>
+        <div id="can2">
+            <h5>Lunch</h5>
+            <div class="fa fa-pencil"id='icon2'></div>
+            <img src="https://cdn-icons.flaticon.com/png/128/3374/premium/3374325.png?token=exp=1651071541~hmac=1d0bd273aee61047fccc5f229cfc03ae">
+        </div>
+        <div id="can3">
+            <h5>Breakfast</h5>
+            <div class="fa fa-pencil"id='icon3'></div>
+            <img src="https://cdn-icons-png.flaticon.com/128/887/887359.png">
+        </div>
+        <div id="can4">
+            <h5>Nap</h5>
+            <div class="fa fa-pencil"id='icon4'></div>
+            <img src="https://cdn-icons-png.flaticon.com/128/1702/1702344.png">
+        </div>
+        <div id="can5">
+            <h5>Gym</h5>
+            <div class="fa fa-pencil"id='icon5'></div>
+            <img src="https://cdn-icons.flaticon.com/png/128/2382/premium/2382679.png?token=exp=1651071707~hmac=d91addea620be3eb0015fb6d9612be15">
+        </div>
+    </div>
+    <h3 id="text2">Tasks</h3>
+
+    <div class="cant2">
+        <div id="task1">
+            <h5>Dinner</h5>
+            <div class="fa fa-pencil"id='icon1'></div>
+            <img src="https://cdn-icons.flaticon.com/png/128/3321/premium/3321601.png?token=exp=1651072017~hmac=17824dd04f7388ce161a0ee6f4876f74">
+            <h6>Dinner Left. Complete Your Dinner At 8:30pm.</h6>
+        </div>
+        <div id="task2">
+            <h5>Yoga</h5>
+            <div class="fa fa-pencil"id='icon1'></div>
+            <img src="https://cdn-icons.flaticon.com/png/128/384/premium/384227.png?token=exp=1651072843~hmac=cc01e490fc0ecfd4293a9bee68810198">
+          
+            <h6>Your Yoga Is At 5:00pm.</h6>
+        </div>
+        <div id="task3">
+            <h5>Running</h5>
+            <div class="fa fa-pencil"id='icon1'></div>
+            <img src="https://cdn-icons-png.flaticon.com/128/1668/1668531.png">
+          
+            <h6>Your Outside Running Is At 6:00pm.</h6>
+        </div>
+        <div id="task4">
+            <h5>Sleep</h5>
+            <div class="fa fa-pencil"id='icon1'></div>
+            <img src="https://cdn-icons-png.flaticon.com/128/3094/3094837.png">
+          
+            <h6>Your Sleeping Time Is 11:00pm.</h6>
+        </div>
+    </div>
+
+    <img id="adjustimg"src='https://cdn-icons-png.flaticon.com/128/3030/3030007.png'>
+<h6 id="manage">Manage Your Time In Correct Way For Beeter Results.<br><br>If We Manage Our Time In Correct Way <br><br>It Helps Us A Lot And Make Our Life Easy.</h6>
+<button id="managebutton">Start Now</button>
+<div class="custom-shape-divider-bottom-1650818819">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+    </svg>
+</div>
+</body>
+</html>
